@@ -1,0 +1,14 @@
+{
+    "name": "shaker-and-soul",
+    "version": "1.0.0",
+    "description": "Craft cocktail catalogue",
+    "main": "index.html",
+    "scripts": {
+        "start": "json-server --watch db.json --port 3000"
+    },
+    "dependencies": {
+        "json-server": "^0.17.4"
+    },
+    "author": "Alba",
+    "license": "ISC"
+}
