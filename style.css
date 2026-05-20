@@ -1,238 +1,227 @@
-/* ═══════════════════════════════════════════════
-   SHAKER & SOUL — style.css
-   Theme: Rosa palo, burdeos, beige y dorado
-   Fonts: Playfair Display (display) + Lora (body)
-   ═══════════════════════════════════════════════ */
 
-/* ── Reset & Base ── */
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Lora', serif;
-  font-weight: 400;
-  background: linear-gradient(145deg, #f9e8e2 0%, #f2d4cc 35%, #e8c4b8 70%, #f0d0c4 100%);
-  color: #2e1a1a;
-  line-height: 1.75;
-  min-height: 100vh;
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    background: linear-gradient(145deg, #f9e8e2 0%, #f2d4cc 35%, #e8c4b8 70%, #f0d0c4 100%);
+    color: #2e1a1a;
+    line-height: 1.75;
+    min-height: 100vh;
 }
 
-/* ── HEADER ── */
 .site-header {
-  background: linear-gradient(150deg, #2a0618 0%, #4a0e28 35%, #7b2d42 70%, #3b0a1f 100%);
-  padding: 5.5rem 0 4.5rem;
-  position: relative;
-  overflow: hidden;
+    background: linear-gradient(150deg, #2a0618 0%, #4a0e28 35%, #7b2d42 70%, #3b0a1f 100%);
+    padding: 5.5rem 0 4.5rem;
+    position: relative;
+    overflow: hidden;
 }
 
 .header-noise {
-  position: absolute;
-  inset: 0;
-  background-image:
+    position: absolute;
+    inset: 0;
+    background-image:
     radial-gradient(ellipse at 20% 60%, rgba(212, 175, 55, 0.1) 0%, transparent 55%),
     radial-gradient(ellipse at 80% 20%, rgba(232, 180, 180, 0.1) 0%, transparent 50%),
     radial-gradient(ellipse at 50% 100%, rgba(200, 100, 120, 0.08) 0%, transparent 40%);
-  pointer-events: none;
+    pointer-events: none;
 }
 
 .site-header::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, #d4af37, #f2c94c, #d4af37, transparent);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #d4af37, #f2c94c, #d4af37, transparent);
 }
 
 .site-header::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, #d4af37, #e8b4b8, #d4af37, transparent);
-  opacity: 0.4;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #d4af37, #e8b4b8, #d4af37, transparent);
+    opacity: 0.4;
 }
 
 .header-eyebrow {
-  font-family: 'Lora', serif;
-  font-size: 0.7rem;
-  letter-spacing: 0.5em;
-  text-transform: uppercase;
-  color: #f2c94c;
-  margin-bottom: 1.25rem;
-  font-style: italic;
+    font-family: 'Lora', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    color: #f2c94c;
+    margin-bottom: 1.25rem;
+    font-style: italic;
 }
 
 .header-title {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(3.8rem, 9vw, 7rem);
-  font-weight: 700;
-  color: #fdf6f0;
-  line-height: 1.0;
-  letter-spacing: -0.01em;
-  margin-bottom: 1.25rem;
-  text-shadow: 0 4px 32px rgba(0, 0, 0, 0.35);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3.8rem, 9vw, 7rem);
+    font-weight: 700;
+    color: #fdf6f0;
+    line-height: 1.0;
+    letter-spacing: -0.01em;
+    margin-bottom: 1.25rem;
+    text-shadow: 0 4px 32px rgba(0, 0, 0, 0.35);
 }
 
 .header-title em {
-  color: #f2c94c;
-  font-style: italic;
-  font-weight: 400;
+    color: #f2c94c;
+    font-style: italic;
+    font-weight: 400;
 }
 
 .header-subtitle {
-  font-family: 'Lora', serif;
-  font-size: 1rem;
-  font-style: italic;
-  font-weight: 400;
-  color: rgba(253, 246, 240, 0.5);
-  letter-spacing: 0.02em;
-  margin-bottom: 0;
-  max-width: 440px;
-  margin-left: auto;
-  margin-right: auto;
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 400;
+    color: rgba(253, 246, 240, 0.5);
+    letter-spacing: 0.02em;
+    margin-bottom: 0;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* ── DECORATIVE DIVIDER ── */
 .catalogue-section::before {
-  content: '';
-  display: block;
-  width: 120px;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #d4af37, #f2c94c, #d4af37, transparent);
-  margin: 0 auto 3.5rem;
+    content: '';
+    display: block;
+    width: 120px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #d4af37, #f2c94c, #d4af37, transparent);
+    margin: 0 auto 3.5rem;
 }
 
-/* ── FILTER NAV ── */
 .filter-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-top: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2.5rem;
 }
 
 .filter-btn {
-  font-family: 'Lora', serif;
-  font-size: 0.75rem;
-  font-style: italic;
-  letter-spacing: 0.08em;
-  padding: 0.4rem 1.3rem;
-  border: 1px solid rgba(212, 175, 55, 0.35);
-  border-radius: 0;
-  background: transparent;
-  color: rgba(253, 246, 240, 0.5);
-  cursor: pointer;
-  transition: all 0.4s ease;
-  position: relative;
+    font-family: 'Lora', serif;
+    font-size: 0.75rem;
+    font-style: italic;
+    letter-spacing: 0.08em;
+    padding: 0.4rem 1.3rem;
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    border-radius: 0;
+    background: transparent;
+    color: rgba(253, 246, 240, 0.5);
+    cursor: pointer;
+    transition: all 0.4s ease;
+    position: relative;
 }
 
 .filter-btn::after {
-  content: '';
-  position: absolute;
-  bottom: -1px;
-  left: 50%;
-  width: 0;
-  height: 1px;
-  background: #f2c94c;
-  transition: all 0.4s ease;
-  transform: translateX(-50%);
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background: #f2c94c;
+    transition: all 0.4s ease;
+    transform: translateX(-50%);
 }
 
 .filter-btn:hover {
-  border-color: rgba(242, 201, 76, 0.6);
-  color: #f2c94c;
+    border-color: rgba(242, 201, 76, 0.6);
+    color: #f2c94c;
 }
 
 .filter-btn:hover::after {
-  width: 80%;
+    width: 80%;
 }
 
 .filter-btn.active {
-  background: linear-gradient(90deg, #d4af37, #f2c94c);
-  border-color: transparent;
-  color: #2a0618;
-  box-shadow: 0 2px 12px rgba(212, 175, 55, 0.45);
-  font-style: normal;
-  font-weight: 600;
-  letter-spacing: 0.12em;
+    background: linear-gradient(90deg, #d4af37, #f2c94c);
+    border-color: transparent;
+    color: #2a0618;
+    box-shadow: 0 2px 12px rgba(212, 175, 55, 0.45);
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0.12em;
 }
 
 .filter-btn.active::after {
-  display: none;
+    display: none;
 }
 
-/* ── CATALOGUE SECTION ── */
+
 .catalogue-section {
-  padding: 4rem 0 6rem;
+    padding: 4rem 0 6rem;
 }
 
-/* ── BOOTSTRAP CARD ── */
 .cocktail-card {
-  background-color: #fff8f5;
-  border: 1px solid #e4c4bc;
-  border-radius: 4px;
-  box-shadow: 0 2px 18px rgba(46, 26, 26, 0.08), 0 1px 4px rgba(46, 26, 26, 0.04);
-  overflow: hidden;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  animation: cardReveal 0.6s ease both;
-  position: relative;
+    background-color: #fff8f5;
+    border: 1px solid #e4c4bc;
+    border-radius: 4px;
+    box-shadow: 0 2px 18px rgba(46, 26, 26, 0.08), 0 1px 4px rgba(46, 26, 26, 0.04);
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    animation: cardReveal 0.6s ease both;
+    position: relative;
 }
 
 .cocktail-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, #d4af37, #f2c94c, #d4af37, transparent);
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  z-index: 1;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #d4af37, #f2c94c, #d4af37, transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
 }
 
 .cocktail-card:hover::before {
-  opacity: 1;
+    opacity: 1;
 }
 
 .cocktail-card:hover {
-  transform: translateY(-7px) rotate(0.2deg);
-  box-shadow: 0 16px 48px rgba(46, 26, 26, 0.14), 0 4px 16px rgba(212, 175, 55, 0.15);
-  border-color: rgba(212, 175, 55, 0.4);
+    transform: translateY(-7px) rotate(0.2deg);
+    box-shadow: 0 16px 48px rgba(46, 26, 26, 0.14), 0 4px 16px rgba(212, 175, 55, 0.15);
+    border-color: rgba(212, 175, 55, 0.4);
 }
 
 @keyframes cardReveal {
-  from {
+    from {
     opacity: 0;
     transform: translateY(24px);
-  }
-  to {
+    }
+    to {
     opacity: 1;
     transform: translateY(0);
-  }
+    }
 }
 
-/* ── CARD IMAGE ── */
 .cocktail-card .card-img-top {
-  width: 100%;
-  height: 215px;
-  object-fit: cover;
-  transition: transform 0.7s ease, filter 0.7s ease;
-  filter: saturate(88%);
+    width: 100%;
+    height: 215px;
+    object-fit: cover;
+    transition: transform 0.7s ease, filter 0.7s ease;
+    filter: saturate(88%);
 }
 
 .cocktail-card:hover .card-img-top {
@@ -241,199 +230,196 @@ body {
 }
 
 .card-img-wrapper {
-  overflow: hidden;
-  position: relative;
+    overflow: hidden;
+    position: relative;
 }
 
 .card-img-wrapper::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, transparent 50%, rgba(42, 6, 24, 0.2) 100%);
-  pointer-events: none;
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 50%, rgba(42, 6, 24, 0.2) 100%);
+    pointer-events: none;
 }
 
-/* ── CARD BODY ── */
 .cocktail-card .card-body {
-  padding: 1.4rem 1.5rem 1rem;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  background-color: #fff8f5;
+    padding: 1.4rem 1.5rem 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff8f5;
 }
 
 .card-category-badge {
-  display: inline-block;
-  font-family: 'Lora', serif;
-  font-size: 0.65rem;
-  font-style: italic;
-  letter-spacing: 0.12em;
-  color: #7b2d42;
-  border: 1px solid rgba(123, 45, 66, 0.28);
-  border-radius: 2px;
-  padding: 0.2rem 0.65rem;
-  margin-bottom: 0.8rem;
+    display: inline-block;
+    font-family: 'Lora', serif;
+    font-size: 0.65rem;
+    font-style: italic;
+    letter-spacing: 0.12em;
+    color: #7b2d42;
+    border: 1px solid rgba(123, 45, 66, 0.28);
+    border-radius: 2px;
+    padding: 0.2rem 0.65rem;
+    margin-bottom: 0.8rem;
 }
 
 .cocktail-card .card-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #2e1a1a;
-  line-height: 1.15;
-  margin-bottom: 0.1rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2e1a1a;
+    line-height: 1.15;
+    margin-bottom: 0.1rem;
 }
 
 .cocktail-card .card-subtitle {
-  font-family: 'Lora', serif;
-  font-size: 0.9rem;
-  font-style: italic;
-  font-weight: 400;
-  color: #a07878;
-  margin-bottom: 0.9rem;
+    font-family: 'Lora', serif;
+    font-size: 0.9rem;
+    font-style: italic;
+    font-weight: 400;
+    color: #a07878;
+    margin-bottom: 0.9rem;
 }
 
 .cocktail-card .card-text {
-  font-family: 'Lora', serif;
-  font-size: 0.85rem;
-  color: #5a3a3a;
-  line-height: 1.7;
-  flex: 1;
+    font-family: 'Lora', serif;
+    font-size: 0.85rem;
+    color: #5a3a3a;
+    line-height: 1.7;
+    flex: 1;
 }
 
-/* ── CARD META ROW ── */
+
 .card-meta {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.6rem;
-  padding: 0.85rem 1.5rem;
-  border-top: 1px solid #e4c4bc;
-  background-color: #fdeee8;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.85rem 1.5rem;
+    border-top: 1px solid #e4c4bc;
+    background-color: #fdeee8;
 }
 
 .meta-item {
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
-  font-family: 'Lora', serif;
-  font-size: 0.72rem;
-  font-style: italic;
-  color: #a07878;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-family: 'Lora', serif;
+    font-size: 0.72rem;
+    font-style: italic;
+    color: #a07878;
 }
 
 .meta-item i {
-  color: #d4af37;
-  font-size: 0.75rem;
-  font-style: normal;
+    color: #d4af37;
+    font-size: 0.75rem;
+    font-style: normal;
 }
 
-/* ── CARD FOOTER ── */
+
 .cocktail-card .card-footer {
-  padding: 0.8rem 1.5rem;
-  border-top: 1px solid #e4c4bc;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #fff8f5;
+    padding: 0.8rem 1.5rem;
+    border-top: 1px solid #e4c4bc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff8f5;
 }
 
 .card-year {
-  font-family: 'Lora', serif;
-  font-size: 0.7rem;
-  font-style: italic;
-  letter-spacing: 0.06em;
-  color: #a07878;
+    font-family: 'Lora', serif;
+    font-size: 0.7rem;
+    font-style: italic;
+    letter-spacing: 0.06em;
+    color: #a07878;
 }
 
 .card-rating {
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-  font-size: 0.8rem;
-  color: #d4af37;
-  font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.8rem;
+    color: #d4af37;
+    font-weight: 600;
 }
 
-/* ── STRENGTH BADGE ── */
+
 .strength-badge {
-  font-family: 'Lora', serif;
-  font-size: 0.62rem;
-  font-style: italic;
-  letter-spacing: 0.08em;
-  padding: 0.18rem 0.6rem;
-  border-radius: 2px;
+    font-family: 'Lora', serif;
+    font-size: 0.62rem;
+    font-style: italic;
+    letter-spacing: 0.08em;
+    padding: 0.18rem 0.6rem;
+    border-radius: 2px;
 }
 
 .strength-Low {
-  background: rgba(212, 175, 55, 0.1);
-  color: #b8941e;
-  border: 1px solid rgba(212, 175, 55, 0.3);
+    background: rgba(212, 175, 55, 0.1);
+    color: #b8941e;
+    border: 1px solid rgba(212, 175, 55, 0.3);
 }
 
 .strength-Medium {
-  background: rgba(196, 122, 133, 0.1);
-  color: #c47a85;
-  border: 1px solid rgba(196, 122, 133, 0.25);
+    background: rgba(196, 122, 133, 0.1);
+    color: #c47a85;
+    border: 1px solid rgba(196, 122, 133, 0.25);
 }
 
 .strength-High {
-  background: rgba(123, 45, 66, 0.09);
-  color: #7b2d42;
-  border: 1px solid rgba(123, 45, 66, 0.2);
+    background: rgba(123, 45, 66, 0.09);
+    color: #7b2d42;
+    border: 1px solid rgba(123, 45, 66, 0.2);
 }
 
-/* ── SITE FOOTER ── */
+
 .site-footer {
-  background: linear-gradient(150deg, #2a0618 0%, #4a0e28 35%, #7b2d42 70%, #3b0a1f 100%);
-  padding: 3rem 0;
-  position: relative;
+    background: linear-gradient(150deg, #2a0618 0%, #4a0e28 35%, #7b2d42 70%, #3b0a1f 100%);
+    padding: 3rem 0;
+    position: relative;
 }
 
 .site-footer::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #d4af37, #f2c94c, #d4af37, transparent);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #d4af37, #f2c94c, #d4af37, transparent);
 }
 
 .footer-tagline {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.35rem;
-  font-style: italic;
-  font-weight: 400;
-  color: #fdf6f0;
-  margin-bottom: 0.4rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem;
+    font-style: italic;
+    font-weight: 400;
+    color: #fdf6f0;
+    margin-bottom: 0.4rem;
 }
 
 .footer-credit {
-  font-family: 'Lora', serif;
-  font-size: 0.72rem;
-  font-style: italic;
-  letter-spacing: 0.1em;
-  color: #f2c94c;
-  margin-bottom: 0;
+    font-family: 'Lora', serif;
+    font-size: 0.72rem;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    color: #f2c94c;
+    margin-bottom: 0;
 }
 
-/* ── HIDDEN (filter) ── */
 .card-col.hidden {
-  display: none;
+    display: none;
 }
 
-/* ── RESPONSIVE ── */
 @media (max-width: 768px) {
-  .site-header {
+.site-header {
     padding: 4rem 0 3.5rem;
-  }
+    }
 
-  .cocktail-card .card-img-top {
+.cocktail-card .card-img-top {
     height: 180px;
-  }
+    }
 
-  .card-meta {
+.card-meta {
     gap: 0.4rem;
-  }
+    }
 }
