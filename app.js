@@ -1,15 +1,18 @@
 const requestURL = 'http://localhost:3000/items';
 
+
 async function fetchCocktailsJson() {
     const response = await fetch(requestURL);
     const data = await response.json();
     return data;
 }
 
+
 fetchCocktailsJson().then(cocktails => {
     document.getElementById('cardGrid').classList.remove('d-none');
     for (let index = 0; index < cocktails.length; index++) {
         const cardGrid = document.getElementById('cardGrid');
+
 
         let title       = cocktails[index].title;
         let subtitle    = cocktails[index].subtitle;
@@ -21,6 +24,7 @@ fetchCocktailsJson().then(cocktails => {
         let origin      = cocktails[index].origin;
         let glass       = cocktails[index].glass;
         let strength    = cocktails[index].strength;
+
 
         cardGrid.innerHTML += `
         <div class="col-12 col-sm-6 col-lg-4 card-col" data-category="${category}">
@@ -57,19 +61,24 @@ fetchCocktailsJson().then(cocktails => {
         `
     }
 
+
     initFilters();
 })
 
+
 function initFilters() {
     const filterBtns = document.querySelectorAll('.filter-btn');
+
 
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             filterBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
 
+
             let selectedCategory = btn.dataset.filter;
             const cardCols = document.querySelectorAll('.card-col');
+
 
             cardCols.forEach(col => {
                 let matches = selectedCategory === 'all' || col.dataset.category === selectedCategory;
