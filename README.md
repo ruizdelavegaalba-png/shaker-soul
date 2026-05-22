@@ -86,7 +86,6 @@ The visual identity is built around a **speakeasy / luxury bar** aesthetic — d
 **1. Clone the repository**
 ```bash
 git clone [https://github.com/your-username/shaker-and-soul.git](https://github.com/ruizdelavegaalba-png/shaker-soul.git)
-cd shaker-and-soul
 ```
 
 **2. Install dependencies**
