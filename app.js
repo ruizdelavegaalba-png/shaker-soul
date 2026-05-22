@@ -1,10 +1,10 @@
-const requestURL = 'http://localhost:3000/items';
+const requestURL = './json/db.json';
 
 
 async function fetchCocktailsJson() {
     const response = await fetch(requestURL);
     const data = await response.json();
-    return data;
+    return data.items;
 }
 
 
