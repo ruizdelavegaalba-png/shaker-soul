@@ -34,8 +34,10 @@ The visual identity is built around a **speakeasy / luxury bar** aesthetic — d
 
 ## 📸 Screenshots
 
-### Hero & Filters
-![Hero section showing the Shaker & Soul header with gold typography and category filter buttons](screenshot-hero.png)
+### Hero 
+<img width="1875" height="708" alt="image" src="https://github.com/user-attachments/assets/fa48cb41-396d-4e06-b86f-736b248e57f2" />
+
+
 
 ### Cocktail Cards — Row 1
 ![Three cocktail cards: Negroni Sbagliato, Penicillin and Jungle Bird](screenshot-cards-1.png)
