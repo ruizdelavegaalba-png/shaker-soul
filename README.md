@@ -40,19 +40,24 @@ The visual identity is built around a **speakeasy / luxury bar** aesthetic — d
 
 
 ### Cocktail Cards — Row 1
-![Three cocktail cards: Negroni Sbagliato, Penicillin and Jungle Bird](screenshot-cards-1.png)
+<img width="1833" height="850" alt="image" src="https://github.com/user-attachments/assets/f9e1a33d-644f-4f10-84a4-11b440774977" />
+
 
 ### Cocktail Cards — Row 2
-![Three cocktail cards: Paper Plane, Naked & Famous and Toronto](screenshot-cards-2.png)
+<img width="1792" height="847" alt="image" src="https://github.com/user-attachments/assets/eafeca7a-d21c-4dd7-b582-5a5e690c6271" />
+
 
 ### Cocktail Cards — Row 3
-![Three cocktail cards: Gimlet, Oaxacan Old Fashioned and Clover Club](screenshot-cards-3.png)
+<img width="1818" height="859" alt="image" src="https://github.com/user-attachments/assets/bffee547-4eef-4bb6-bc72-24b5b5a4ae67" />
+
 
 ### Cocktail Cards — Row 4
-![Three cocktail cards: Last Word, Bees Knees and Corpse Reviver #2](screenshot-cards-4.png)
+<img width="1785" height="867" alt="image" src="https://github.com/user-attachments/assets/f9ed5809-e3fe-4a6f-9173-c8a0115543c9" />
+
 
 ### Footer
-![Footer with the tagline Drink curious. Drink well.](screenshot-footer.png)
+<img width="1861" height="377" alt="image" src="https://github.com/user-attachments/assets/a12aa2ac-805e-4032-a28a-c7035dd06ccf" />
+
 
 ---
 
