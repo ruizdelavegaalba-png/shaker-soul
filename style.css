@@ -1,4 +1,27 @@
+/* ==========================================================================
+   1. VARIABLES DE DISEÑO (Colores personalizados y Degradados propios)
+   ========================================================================== */
+:root {
+    /* Paleta de Coctelería: Tonos oscuros de ron/borgoña, ámbar y oro viejo */
+    --color-bg-dark: #0f0508;
+    --color-bg-light: #160a0f;
+    --color-card-bg: #1f1218;
+    --color-text-main: #f5ece1;
+    --color-text-muted: #bdafa2;
+    --color-gold-bright: #e5bc6d;
+    --color-gold-deep: #bc8f3f;
+    --color-accent-wine: #5c1d33;
 
+    /* Degradados complejos construidos desde cero */
+    --gradient-premium-dark: radial-gradient(circle at 50% 30%, #290d18 0%, #11050a 70%, #080205 100%);
+    --gradient-gold-metallic: linear-gradient(135deg, #f3db9f 0%, #bc8f3f 45%, #a37626 70%, #d9b463 100%);
+    --gradient-card-glow: linear-gradient(180deg, rgba(92, 29, 51, 0.4) 0%, rgba(31, 18, 24, 0) 100%);
+    --gradient-gold-border: linear-gradient(90deg, transparent 0%, #bc8f3f 50%, transparent 100%);
+}
+
+/* ==========================================================================
+   2. ESTILOS GENERALES
+   ========================================================================== */
 *,
 *::before,
 *::after {
@@ -12,370 +35,318 @@ html {
 body {
     font-family: 'Lora', serif;
     font-weight: 400;
-    background: linear-gradient(145deg, #f9e8e2 0%, #f2d4cc 35%, #e8c4b8 70%, #f0d0c4 100%);
-    color: #2e1a1a;
-    line-height: 1.75;
+    background-color: var(--color-bg-dark);
+    background-image: radial-gradient(rgba(188, 143, 63, 0.03) 1px, transparent 0);
+    background-size: 24px 24px;
+    color: var(--color-text-main);
+    line-height: 1.8;
     min-height: 100vh;
 }
 
+/* ==========================================================================
+   3. HEADER (Atmósfera Speakeasy / Bar Nocturno)
+   ========================================================================== */
 .site-header {
-    background: linear-gradient(150deg, #2a0618 0%, #4a0e28 35%, #7b2d42 70%, #3b0a1f 100%);
-    padding: 5.5rem 0 4.5rem;
+    background: var(--gradient-premium-dark);
+    padding: 6.5rem 0 5rem;
     position: relative;
     overflow: hidden;
+    border-bottom: 1px solid rgba(188, 143, 63, 0.15);
 }
 
-.header-noise {
+/* Destello de luz ambiental simulando la iluminación tenue de un bar */
+.header-overlay-glow {
     position: absolute;
     inset: 0;
-    background-image:
-    radial-gradient(ellipse at 20% 60%, rgba(212, 175, 55, 0.1) 0%, transparent 55%),
-    radial-gradient(ellipse at 80% 20%, rgba(232, 180, 180, 0.1) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 100%, rgba(200, 100, 120, 0.08) 0%, transparent 40%);
+    background: radial-gradient(circle at 50% -20%, rgba(229, 188, 109, 0.12) 0%, transparent 60%);
     pointer-events: none;
 }
 
-.site-header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, #d4af37, #f2c94c, #d4af37, transparent);
-}
-
+/* Adorno de línea fina dorada superior e inferior */
+.site-header::before,
 .site-header::after {
     content: '';
     position: absolute;
-    bottom: 0;
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, #d4af37, #e8b4b8, #d4af37, transparent);
-    opacity: 0.4;
+    background: var(--gradient-gold-border);
 }
+.site-header::before { top: 0; }
+.site-header::after { bottom: 0; }
 
 .header-eyebrow {
     font-family: 'Lora', serif;
-    font-size: 0.7rem;
-    letter-spacing: 0.5em;
+    font-size: 0.75rem;
+    letter-spacing: 0.4em;
     text-transform: uppercase;
-    color: #f2c94c;
-    margin-bottom: 1.25rem;
-    font-style: italic;
+    color: var(--color-gold-bright);
+    margin-bottom: 1.5rem;
+    opacity: 0.85;
 }
 
 .header-title {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(3.8rem, 9vw, 7rem);
+    font-size: clamp(3.2rem, 8vw, 6.5rem);
     font-weight: 700;
-    color: #fdf6f0;
-    line-height: 1.0;
-    letter-spacing: -0.01em;
-    margin-bottom: 1.25rem;
-    text-shadow: 0 4px 32px rgba(0, 0, 0, 0.35);
+    color: #ffffff;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
 
 .header-title em {
-    color: #f2c94c;
+    color: var(--color-gold-bright);
+    font-family: 'Playfair Display', serif;
     font-style: italic;
     font-weight: 400;
 }
 
 .header-subtitle {
     font-family: 'Lora', serif;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-style: italic;
-    font-weight: 400;
-    color: rgba(253, 246, 240, 0.5);
-    letter-spacing: 0.02em;
-    margin-bottom: 0;
-    max-width: 440px;
-    margin-left: auto;
-    margin-right: auto;
+    color: var(--color-text-muted);
+    max-width: 480px;
+    margin: 0 auto;
 }
 
-.catalogue-section::before {
-    content: '';
-    display: block;
-    width: 120px;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #d4af37, #f2c94c, #d4af37, transparent);
-    margin: 0 auto 3.5rem;
-}
-
+/* ==========================================================================
+   4. NAVEGACIÓN Y FILTROS
+   ========================================================================== */
 .filter-nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.5rem;
-    margin-top: 2.5rem;
+    gap: 0.75rem;
+    margin-top: 3.5rem;
 }
 
 .filter-btn {
     font-family: 'Lora', serif;
-    font-size: 0.75rem;
-    font-style: italic;
-    letter-spacing: 0.08em;
-    padding: 0.4rem 1.3rem;
-    border: 1px solid rgba(212, 175, 55, 0.35);
-    border-radius: 0;
-    background: transparent;
-    color: rgba(253, 246, 240, 0.5);
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    padding: 0.5rem 1.6rem;
+    border: 1px solid rgba(229, 188, 109, 0.25);
+    border-radius: 0px; /* Sin esquinas redondeadas para un look más arquitectónico */
+    background: rgba(31, 18, 24, 0.4);
+    color: var(--color-text-muted);
     cursor: pointer;
-    transition: all 0.4s ease;
-    position: relative;
-}
-
-.filter-btn::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 50%;
-    width: 0;
-    height: 1px;
-    background: #f2c94c;
-    transition: all 0.4s ease;
-    transform: translateX(-50%);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .filter-btn:hover {
-    border-color: rgba(242, 201, 76, 0.6);
-    color: #f2c94c;
-}
-
-.filter-btn:hover::after {
-    width: 80%;
+    border-color: var(--color-gold-bright);
+    color: var(--color-gold-bright);
+    background: rgba(92, 29, 51, 0.2);
 }
 
 .filter-btn.active {
-    background: linear-gradient(90deg, #d4af37, #f2c94c);
+    background: var(--gradient-gold-metallic);
     border-color: transparent;
-    color: #2a0618;
-    box-shadow: 0 2px 12px rgba(212, 175, 55, 0.45);
-    font-style: normal;
+    color: var(--color-bg-dark);
     font-weight: 600;
-    letter-spacing: 0.12em;
+    box-shadow: 0 4px 15px rgba(188, 143, 63, 0.35);
 }
 
-.filter-btn.active::after {
-    display: none;
-}
-
-
+/* ==========================================================================
+   5. SECCIÓN DE CATÁLOGO (Tarjetas de Cócteles)
+   ========================================================================== */
 .catalogue-section {
-    padding: 4rem 0 6rem;
+    padding: 5rem 0 7rem;
+    background-color: var(--color-bg-light);
 }
 
+/* Tarjeta base */
 .cocktail-card {
-    background-color: #fff8f5;
-    border: 1px solid #e4c4bc;
-    border-radius: 4px;
-    box-shadow: 0 2px 18px rgba(46, 26, 26, 0.08), 0 1px 4px rgba(46, 26, 26, 0.04);
+    background-color: var(--color-card-bg);
+    border: 1px solid rgba(188, 143, 63, 0.12);
+    border-radius: 0px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     overflow: hidden;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
     height: 100%;
     display: flex;
     flex-direction: column;
-    animation: cardReveal 0.6s ease both;
     position: relative;
 }
 
-.cocktail-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, #d4af37, #f2c94c, #d4af37, transparent);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    z-index: 1;
-}
-
-.cocktail-card:hover::before {
-    opacity: 1;
-}
-
+/* Efecto Hover en la Tarjeta */
 .cocktail-card:hover {
-    transform: translateY(-7px) rotate(0.2deg);
-    box-shadow: 0 16px 48px rgba(46, 26, 26, 0.14), 0 4px 16px rgba(212, 175, 55, 0.15);
-    border-color: rgba(212, 175, 55, 0.4);
+    transform: translateY(-6px);
+    border-color: rgba(229, 188, 109, 0.4);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(188, 143, 63, 0.05);
 }
 
-@keyframes cardReveal {
-    from {
-    opacity: 0;
-    transform: translateY(24px);
-    }
-    to {
-    opacity: 1;
-    transform: translateY(0);
-    }
+/* Contenedor de Imagen */
+.card-img-wrapper {
+    overflow: hidden;
+    position: relative;
+    height: 240px;
 }
 
 .cocktail-card .card-img-top {
     width: 100%;
-    height: 215px;
+    height: 100%;
     object-fit: cover;
-    transition: transform 0.7s ease, filter 0.7s ease;
-    filter: saturate(88%);
+    transition: transform 0.6s ease;
 }
 
 .cocktail-card:hover .card-img-top {
-  transform: scale(1.05);
-  filter: saturate(105%);
+    transform: scale(1.04);
 }
 
-.card-img-wrapper {
-    overflow: hidden;
-    position: relative;
-}
-
+/* Sombreado interno sobre la imagen para integración del color */
 .card-img-wrapper::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, transparent 50%, rgba(42, 6, 24, 0.2) 100%);
+    background: linear-gradient(to bottom, transparent 60%, var(--color-card-bg) 100%);
     pointer-events: none;
 }
 
+/* Cuerpo de la tarjeta */
 .cocktail-card .card-body {
-    padding: 1.4rem 1.5rem 1rem;
+    padding: 1.75rem 1.75rem 1.25rem;
     flex: 1;
     display: flex;
     flex-direction: column;
-    background-color: #fff8f5;
+    background: var(--gradient-card-glow);
 }
 
+/* Insignia de Categoría */
 .card-category-badge {
     display: inline-block;
+    align-self: flex-start;
     font-family: 'Lora', serif;
     font-size: 0.65rem;
     font-style: italic;
-    letter-spacing: 0.12em;
-    color: #7b2d42;
-    border: 1px solid rgba(123, 45, 66, 0.28);
-    border-radius: 2px;
-    padding: 0.2rem 0.65rem;
-    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-gold-bright);
+    border-bottom: 1px solid var(--color-gold-deep);
+    padding-bottom: 0.2rem;
+    margin-bottom: 1rem;
 }
 
 .cocktail-card .card-title {
     font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
+    font-size: 1.65rem;
     font-weight: 700;
-    color: #2e1a1a;
-    line-height: 1.15;
-    margin-bottom: 0.1rem;
+    color: #ffffff;
+    line-height: 1.2;
+    margin-bottom: 0.25rem;
 }
 
 .cocktail-card .card-subtitle {
     font-family: 'Lora', serif;
     font-size: 0.9rem;
     font-style: italic;
-    font-weight: 400;
-    color: #a07878;
-    margin-bottom: 0.9rem;
+    color: var(--color-gold-deep);
+    margin-bottom: 1.2rem;
 }
 
 .cocktail-card .card-text {
     font-family: 'Lora', serif;
-    font-size: 0.85rem;
-    color: #5a3a3a;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
     line-height: 1.7;
     flex: 1;
 }
 
-
+/* ==========================================================================
+   6. METADATOS Y BADGES INTERNOS
+   ========================================================================== */
 .card-meta {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 0.6rem;
-    padding: 0.85rem 1.5rem;
-    border-top: 1px solid #e4c4bc;
-    background-color: #fdeee8;
+    gap: 0.8rem;
+    padding: 1rem 1.75rem;
+    border-top: 1px solid rgba(188, 143, 63, 0.08);
+    background-color: rgba(15, 5, 8, 0.3);
 }
 
 .meta-item {
     display: flex;
     align-items: center;
-    gap: 0.3rem;
+    gap: 0.4rem;
     font-family: 'Lora', serif;
-    font-size: 0.72rem;
-    font-style: italic;
-    color: #a07878;
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
 }
 
 .meta-item i {
-    color: #d4af37;
-    font-size: 0.75rem;
-    font-style: normal;
+    color: var(--color-gold-bright);
 }
 
+/* Estilos de fortaleza alcohólica consistentes */
+.strength-badge {
+    font-family: 'Lora', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.05em;
+    padding: 0.2rem 0.6rem;
+    border-radius: 0px;
+    font-weight: 500;
+}
 
+.strength-Low {
+    background: rgba(229, 188, 109, 0.1);
+    color: var(--color-gold-bright);
+    border: 1px solid rgba(229, 188, 109, 0.25);
+}
+
+.strength-Medium {
+    background: rgba(188, 143, 63, 0.1);
+    color: #e5a93c;
+    border: 1px solid rgba(188, 143, 63, 0.3);
+}
+
+.strength-High {
+    background: rgba(92, 29, 51, 0.3);
+    color: #ff7d9a;
+    border: 1px solid rgba(92, 29, 51, 0.6);
+}
+
+/* Footer Interno de Tarjeta */
 .cocktail-card .card-footer {
-    padding: 0.8rem 1.5rem;
-    border-top: 1px solid #e4c4bc;
+    padding: 1rem 1.75rem 1.5rem;
+    border-top: 1px solid rgba(188, 143, 63, 0.08);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #fff8f5;
+    background-color: rgba(15, 5, 8, 0.3);
 }
 
 .card-year {
     font-family: 'Lora', serif;
-    font-size: 0.7rem;
-    font-style: italic;
-    letter-spacing: 0.06em;
-    color: #a07878;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.3);
 }
 
 .card-rating {
     display: flex;
     align-items: center;
     gap: 0.25rem;
-    font-size: 0.8rem;
-    color: #d4af37;
+    font-size: 0.85rem;
+    color: var(--color-gold-bright);
     font-weight: 600;
 }
 
-
-.strength-badge {
-    font-family: 'Lora', serif;
-    font-size: 0.62rem;
-    font-style: italic;
-    letter-spacing: 0.08em;
-    padding: 0.18rem 0.6rem;
-    border-radius: 2px;
+/* Clases de utilidad para el script dinámico */
+.card-col.hidden {
+    display: none;
 }
 
-.strength-Low {
-    background: rgba(212, 175, 55, 0.1);
-    color: #b8941e;
-    border: 1px solid rgba(212, 175, 55, 0.3);
-}
-
-.strength-Medium {
-    background: rgba(196, 122, 133, 0.1);
-    color: #c47a85;
-    border: 1px solid rgba(196, 122, 133, 0.25);
-}
-
-.strength-High {
-    background: rgba(123, 45, 66, 0.09);
-    color: #7b2d42;
-    border: 1px solid rgba(123, 45, 66, 0.2);
-}
-
-
+/* ==========================================================================
+   7. PIE DE PÁGINA
+   ========================================================================== */
 .site-footer {
-    background: linear-gradient(150deg, #2a0618 0%, #4a0e28 35%, #7b2d42 70%, #3b0a1f 100%);
-    padding: 3rem 0;
+    background: #080205;
+    padding: 4rem 0;
     position: relative;
+    border-top: 1px solid rgba(188, 143, 63, 0.15);
 }
 
 .site-footer::before {
@@ -384,42 +355,45 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #d4af37, #f2c94c, #d4af37, transparent);
+    height: 1px;
+    background: var(--gradient-gold-border);
 }
 
 .footer-tagline {
     font-family: 'Playfair Display', serif;
-    font-size: 1.35rem;
+    font-size: 1.5rem;
     font-style: italic;
-    font-weight: 400;
-    color: #fdf6f0;
-    margin-bottom: 0.4rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
 }
 
 .footer-credit {
     font-family: 'Lora', serif;
-    font-size: 0.72rem;
-    font-style: italic;
-    letter-spacing: 0.1em;
-    color: #f2c94c;
-    margin-bottom: 0;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-gold-deep);
 }
 
-.card-col.hidden {
-    display: none;
-}
-
+/* ==========================================================================
+   8. RESPONSIVE DESIGN
+   ========================================================================== */
 @media (max-width: 768px) {
-.site-header {
-    padding: 4rem 0 3.5rem;
+    .site-header {
+        padding: 4.5rem 0 3.5rem;
     }
-
-.cocktail-card .card-img-top {
-    height: 180px;
+    
+    .card-img-wrapper {
+        height: 200px;
     }
-
-.card-meta {
-    gap: 0.4rem;
+    
+    .filter-nav {
+        gap: 0.5rem;
+        margin-top: 2.5rem;
+    }
+    
+    .filter-btn {
+        padding: 0.4rem 1.1rem;
+        font-size: 0.8rem;
     }
 }
