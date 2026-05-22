@@ -2,7 +2,7 @@
 
 > *A curated catalogue of the world's most celebrated craft cocktails.*
 
-[View on Vercel](https://cocktail-catalogue-xi.vercel.app)
+[[View on Vercel](https://shaker-soul.vercel.app/)]
 
 ---
 
