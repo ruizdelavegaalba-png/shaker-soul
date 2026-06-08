@@ -1,8 +1,4 @@
-/* ==========================================================================
-   1. VARIABLES DE DISEÑO (Colores personalizados y Degradados propios)
-   ========================================================================== */
 :root {
-    /* Paleta de Coctelería: Tonos oscuros de ron/borgoña, ámbar y oro viejo */
     --color-bg-dark: #0f0508;
     --color-bg-light: #160a0f;
     --color-card-bg: #1f1218;
@@ -11,17 +7,12 @@
     --color-gold-bright: #e5bc6d;
     --color-gold-deep: #bc8f3f;
     --color-accent-wine: #5c1d33;
-
-    /* Degradados complejos construidos desde cero */
     --gradient-premium-dark: radial-gradient(circle at 50% 30%, #290d18 0%, #11050a 70%, #080205 100%);
     --gradient-gold-metallic: linear-gradient(135deg, #f3db9f 0%, #bc8f3f 45%, #a37626 70%, #d9b463 100%);
     --gradient-card-glow: linear-gradient(180deg, rgba(92, 29, 51, 0.4) 0%, rgba(31, 18, 24, 0) 100%);
     --gradient-gold-border: linear-gradient(90deg, transparent 0%, #bc8f3f 50%, transparent 100%);
 }
 
-/* ==========================================================================
-   2. ESTILOS GENERALES
-   ========================================================================== */
 *,
 *::before,
 *::after {
@@ -43,9 +34,7 @@ body {
     min-height: 100vh;
 }
 
-/* ==========================================================================
-   3. HEADER (Atmósfera Speakeasy / Bar Nocturno)
-   ========================================================================== */
+
 .site-header {
     background: var(--gradient-premium-dark);
     padding: 6.5rem 0 5rem;
@@ -54,7 +43,7 @@ body {
     border-bottom: 1px solid rgba(188, 143, 63, 0.15);
 }
 
-/* Destello de luz ambiental simulando la iluminación tenue de un bar */
+
 .header-overlay-glow {
     position: absolute;
     inset: 0;
@@ -62,7 +51,7 @@ body {
     pointer-events: none;
 }
 
-/* Adorno de línea fina dorada superior e inferior */
+
 .site-header::before,
 .site-header::after {
     content: '';
@@ -112,9 +101,6 @@ body {
     margin: 0 auto;
 }
 
-/* ==========================================================================
-   4. NAVEGACIÓN Y FILTROS
-   ========================================================================== */
 .filter-nav {
     display: flex;
     flex-wrap: wrap;
@@ -150,15 +136,11 @@ body {
     box-shadow: 0 4px 15px rgba(188, 143, 63, 0.35);
 }
 
-/* ==========================================================================
-   5. SECCIÓN DE CATÁLOGO (Tarjetas de Cócteles)
-   ========================================================================== */
 .catalogue-section {
     padding: 5rem 0 7rem;
     background-color: var(--color-bg-light);
 }
 
-/* Tarjeta base */
 .cocktail-card {
     background-color: var(--color-card-bg);
     border: 1px solid rgba(188, 143, 63, 0.12);
@@ -172,14 +154,14 @@ body {
     position: relative;
 }
 
-/* Efecto Hover en la Tarjeta */
+
 .cocktail-card:hover {
     transform: translateY(-6px);
     border-color: rgba(229, 188, 109, 0.4);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(188, 143, 63, 0.05);
 }
 
-/* Contenedor de Imagen */
+
 .card-img-wrapper {
     overflow: hidden;
     position: relative;
@@ -197,7 +179,7 @@ body {
     transform: scale(1.04);
 }
 
-/* Sombreado interno sobre la imagen para integración del color */
+
 .card-img-wrapper::after {
     content: '';
     position: absolute;
@@ -206,7 +188,7 @@ body {
     pointer-events: none;
 }
 
-/* Cuerpo de la tarjeta */
+
 .cocktail-card .card-body {
     padding: 1.75rem 1.75rem 1.25rem;
     flex: 1;
@@ -215,7 +197,6 @@ body {
     background: var(--gradient-card-glow);
 }
 
-/* Insignia de Categoría */
 .card-category-badge {
     display: inline-block;
     align-self: flex-start;
@@ -255,9 +236,6 @@ body {
     flex: 1;
 }
 
-/* ==========================================================================
-   6. METADATOS Y BADGES INTERNOS
-   ========================================================================== */
 .card-meta {
     display: flex;
     flex-wrap: wrap;
@@ -281,7 +259,6 @@ body {
     color: var(--color-gold-bright);
 }
 
-/* Estilos de fortaleza alcohólica consistentes */
 .strength-badge {
     font-family: 'Lora', serif;
     font-size: 0.65rem;
@@ -334,14 +311,11 @@ body {
     font-weight: 600;
 }
 
-/* Clases de utilidad para el script dinámico */
 .card-col.hidden {
     display: none;
 }
 
-/* ==========================================================================
-   7. PIE DE PÁGINA
-   ========================================================================== */
+
 .site-footer {
     background: #080205;
     padding: 4rem 0;
@@ -375,9 +349,6 @@ body {
     color: var(--color-gold-deep);
 }
 
-/* ==========================================================================
-   8. RESPONSIVE DESIGN
-   ========================================================================== */
 @media (max-width: 768px) {
     .site-header {
         padding: 4.5rem 0 3.5rem;
