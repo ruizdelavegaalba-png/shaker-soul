@@ -1,4 +1,4 @@
-# 🍸 Shaker & Soul — Craft Cocktail Catalogue
+#  Shaker & Soul — Craft Cocktail Catalogue
 
 > *A curated catalogue of the world's most celebrated craft cocktails.*
 
@@ -6,7 +6,7 @@
 
 ---
 
-## 📖 Theme
+##  Theme
 
 **Shaker & Soul** is a visual catalogue dedicated to the craft cocktail world. The project showcases a curated selection of 10+ iconic cocktails from around the globe — from timeless classics like the Negroni Sbagliato to modern cult favourites like the Penicillin and the Jungle Bird.
 
@@ -14,7 +14,7 @@ Each card presents a cocktail with its origin, glassware, alcohol strength, rati
 
 ---
 
-## 🎨 Design
+##  Design
 
 The visual identity is built around a **speakeasy / luxury bar** aesthetic — dark, atmospheric, and refined.
 
@@ -32,7 +32,7 @@ The visual identity is built around a **speakeasy / luxury bar** aesthetic — d
 
 ---
 
-## 📸 Screenshots
+##  Screenshots
 
 ### Hero 
 <img width="1875" height="708" alt="image" src="https://github.com/user-attachments/assets/fa48cb41-396d-4e06-b86f-736b248e57f2" />
@@ -61,7 +61,7 @@ The visual identity is built around a **speakeasy / luxury bar** aesthetic — d
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Technology | Purpose |
 |---|---|
@@ -76,7 +76,7 @@ The visual identity is built around a **speakeasy / luxury bar** aesthetic — d
 
 ---
 
-## ▶️ How to Run Locally
+##  How to Run Locally
 
 ### Prerequisites
 - [Node.js](https://nodejs.org/) installed on your machine
@@ -104,11 +104,11 @@ The API will be available at `http://localhost:3000/items`
 
 Open `index.html` with **Live Server** in VS Code, or simply open the file in your browser.
 
-> ⚠️ **Note:** The JSON Server must be running locally for the cards to appear. Vercel only hosts the static frontend — the data layer runs on your machine during development.
+>  **Note:** The JSON Server must be running locally for the cards to appear. Vercel only hosts the static frontend — the data layer runs on your machine during development.
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 shaker-and-soul/
@@ -121,7 +121,7 @@ shaker-and-soul/
 
 ---
 
-## 👩‍💻 Author
+##  Author
 
 **Alba Ruiz de la Vega**  
 Grado Superior en Desarrollo de Aplicaciones Web (DAW) — Sevilla, 2026
